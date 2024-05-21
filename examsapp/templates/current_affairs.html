@@ -1,0 +1,21 @@
+<!-- examsapp/templates/examsapp/current_affairs.html -->
+<!-- {% extends 'index.html' %} -->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Current Affairs</title>
+</head>
+<body>
+    <h1>Current Affairs</h1>
+    <ul>
+        {% for affair in current_affairs %}
+            <li>
+                <h2>{{ affair.title }}</h2>
+                <p>{{ affair.description }}</p>
+                <p>Publication Date: {{ affair.publication_date }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
