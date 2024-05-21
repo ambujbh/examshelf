@@ -16,9 +16,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from examsapp.views import home
+from examsapp.views import home, current_affairs, sql_practice, login
+# from examsapp.views import current_affairs
 
 urlpatterns = [
     path('admin/', admin.site.urls),    
     path('', home, name='home'),
+    path('current-affairs/', current_affairs, name='current_affairs'),
+    path('sql_practice/', sql_practice, name='sql_practice'),
+    path('login/', login, name='login'),
+    # path('', views.index, name='index'),
+    # path('polls/', include('polls.urls')),
 ]
